@@ -55,5 +55,6 @@ def find_images_with_similarity_score_greater_than(engine: Engine, similarity_sc
         ).scalars().all()
         return result
 similarity_score = 0.8
+
 similar_images = find_images_with_similarity_score_greater_than(engine, similarity_score, image)
 print("similar images: ", (i.id for i in similar_images))
